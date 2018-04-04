@@ -23,4 +23,8 @@ const fooBar = {
 //   console.log(fb, fooBar[fb]);
 // }
 
+const hobbitsMeals = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'],
+};
+//console.log(hobbitsMeals.meals[3]);
 
