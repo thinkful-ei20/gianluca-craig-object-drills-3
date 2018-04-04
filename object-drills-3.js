@@ -45,3 +45,25 @@ const persons = [
 
 //persons.forEach(e => console.log(e.name, e.jobTitle));
 
+const persons2 = [
+  {
+    name: 'Bob',
+    jobTitle: 'Preacher',
+    boss: 'big bother',
+  },
+  {
+    name: 'Jeff',
+    jobTitle: 'Astronaut',
+    boss: 'big brother',
+  },
+  {
+    name: 'Jill',
+    jobTitle: 'Networking Engineer',
+  },
+];
+
+persons2.forEach(e => {
+  let message = e.hasOwnProperty('boss') ? `${e.jobTitle} ${e.name} reports to ${e.boss}` : `${e.jobTitle} ${e.name} doesn't report to anybody`;
+  console.log(message);
+});
+
