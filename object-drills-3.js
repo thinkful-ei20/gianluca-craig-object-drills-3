@@ -92,3 +92,46 @@ function decode(string) {
 }
 //console.log(decodeWords(toBeDecoded));
 
+// function mammal(name, numEyes) {
+//   return {
+//     name: name,
+//     isWarmblooded: true,
+//     numEyes: numEyes,
+//   };
+// }
+
+
+function createCharacter(name, nickName, race, origin, attack, defense) {
+  return {
+    name,
+    nickName,
+    race,
+    origin,
+    attack,
+    defense,
+    describe: function() {
+      return `${this.name} is a ${this.race} from ${this.origin}`;
+    },
+    evaluateFight: function(opponent) {
+      let thisDamage = this.defense > opponent.attack ? 0 : opponent.attack - this.defense; 
+      let opponentDamage = opponent.defense > this.attack ? 0 : this.attack - opponent.defense;
+      return `Your opponent takes ${opponentDamage} damage and you receive ${thisDamage} damage`;
+    },
+  };
+}
+const characters = [
+  createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Arogorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 6, 8),
+  createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 8, 5),
+];
+
+characters.push(createCharacter('Arwen Undomiel', 'arwen', 'Half-Elf', 'Rivendell', 8, 7));
+
+//console.log(characters.find(e => e.nickName === 'aragorn'));
+const hobbits = characters.filter(e => e.race === 'Hobbit');
+//console.log(hobbits);
+const tuffGuys = characters.filter(e => e.attack > 5);
+console.log(tuffGuys);
+//console.log(characters);
