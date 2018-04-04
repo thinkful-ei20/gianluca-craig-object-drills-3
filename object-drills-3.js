@@ -28,3 +28,20 @@ const hobbitsMeals = {
 };
 //console.log(hobbitsMeals.meals[3]);
 
+const persons = [
+  {
+    name: 'Bob',
+    jobTitle: 'Preacher',
+  },
+  {
+    name: 'Jeff',
+    jobTitle: 'Astronaut',
+  },
+  {
+    name: 'Jill',
+    jobTitle: 'Networking Engineer',
+  },
+];
+
+//persons.forEach(e => console.log(e.name, e.jobTitle));
+
